@@ -1,0 +1,75 @@
+<footer>
+    <div class="footer">
+
+        <div class="footer-section">
+            <h3>Vidhya's Portfolio</h3>
+            <p>
+                Passionate Web Developer focused on creating modern,
+                responsive, and user-friendly websites.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/about">about</a></li>
+                <li><a href="/services">services</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <!-- <li><a href="/contact-me">Contact</a></li> -->
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+                <li>Web Development</li>
+                <li>Frontend Design</li>
+                <li>Responsive Websites</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect</h3>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/vidhya-mewara-459021297/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/vidhya-mewara"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="footer-line">
+
+    <div class="footer-bottom">
+        © 2026 Vidhya's Portfolio | All Rights Reserved
+    </div>
+</footer>
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+        strings: ['Web developer'],
+        typeSpeed: 50,
+    });
+</script>
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        const icon = menuBtn.querySelector("i");
+
+        if (navLinks.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+        }
+    });
+</script>
