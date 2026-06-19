@@ -17,6 +17,9 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
     res.render("about");
 })
+app.get("/skills", (req, res) => {
+    res.render("skills");
+})
 app.get("/services", (req, res) => {
     res.render("services");
 })

@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate"); %>
 
    
-    <main>
+    
         <section class="firstSection">
             <div class="leftSection">
                 Hi, My name is
@@ -11,14 +11,44 @@
                     <span id="element"></span>
                 </div>
                 <div class="buttons">
-                    <button class="btn btn-primary">Download CV</button>
-                    <button class="btn btn-secondary">Contact Me</button>
+                    <button type="button" class="custom-btn custom-btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Download CV
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Download my CV</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you want to download my cv , then click on download.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="custom-btn custom-btn-secondary">Contact Me</button>
                 </div>
             </div>
             <div class="rightSection">
                 <img src="/bg.png" alt="profile picture">
             </div>
         </section>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        
+            <strong>Available for Freelance!</strong>
+            I'm currently open to internships and full-stack development opportunities.
+        
+            <button type="button" class="btn-close" data-bs-dismiss="alert">
+            </button>
+        
+        </div>
 
-    </main>
+    
   
