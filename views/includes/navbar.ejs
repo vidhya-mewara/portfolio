@@ -8,15 +8,69 @@
             </div>
 
             <div class="right" id="navLinks">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/skills">Skills</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <!-- <li><a href="/contact-me">Contact Me</a></li> -->
-                </ul>
+<ul>
+
+    <li>
+        <a class="<%= currentUrl === '/' ? 'active' : '' %>" href="/">Home</a>
+    </li>
+
+    <li>
+        <a class="<%= currentUrl === '/about' ? 'active' : '' %>" href="/about">About</a>
+    </li>
+
+    <li>
+        <a class="<%= currentUrl === '/skills' ? 'active' : '' %>" href="/skills">Skills</a>
+    </li>
+
+    <li>
+        <a class="<%= currentUrl === '/services' ? 'active' : '' %>" href="/services">Services</a>
+    </li>
+
+    <li>
+        <a class="<%= currentUrl === '/projects' ? 'active' : '' %>" href="/projects">Projects</a>
+    </li>
+    <% if(currUser && currUser.isAdmin){ %>
+    <li>
+        <a class="<%= currentUrl === '/dashboard' ? 'active' : '' %>" href="/dashboard">Dashboard</a>
+    </li>
+    <% } %>
+    <li>
+        <a class="<%= currentUrl === '/contact' ? 'active' : '' %>" href="/contact">Contact</a>
+    </li>
+
+</ul>
                 
+            </div>
+            <div class=" toogle justify-content-center mt-4 ms-auto">
+                <input class="checkbox" type="checkbox" id="checkbox">
+                <label class="checkbox-label" for="checkbox">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            
             </div>
         </nav>
     </header>
+    <script> btn=document.getElementById("checkbox");
+    
+    btn.addEventListener("change",()=>{
+    
+    document.body.classList.toggle("light-mode");
+    
+    localStorage.setItem(
+    "theme",
+    document.body.classList.contains("light-mode")
+    );
+    
+    });
+    
+    window.addEventListener("load",()=>{
+    
+    if(localStorage.getItem("theme")==="true"){
+    
+    document.body.classList.add("light-mode");
+    
+    }
+    
+    });</script>

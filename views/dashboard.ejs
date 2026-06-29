@@ -1,0 +1,292 @@
+<% layout("/layouts/boilerplate"); %>
+
+<section class="dashboard py-5">
+
+    <div class="container">
+
+        <!-- Welcome Section -->
+        <div class="dashboard-header text-center mb-5">
+
+        <h1 id="greeting" class="fw-bold">
+            Welcome 👋
+        </h1>
+        
+        <p class="lead">
+            Vidhya Mewara | Full Stack Developer
+        </p>
+        
+        <p id="today" class="text-muted"></p>
+
+        </div>
+
+        <!-- Statistics -->
+        <div class="row g-4">
+
+            <div class="col-md-3">
+
+                <div class="card dashboard-card shadow-sm">
+
+                    <div class="card-body text-center">
+
+                        <h5>Projects</h5>
+
+                        <h2 id="projectCount">4</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="card dashboard-card shadow-sm">
+
+                    <div class="card-body text-center">
+
+                        <h5>Skills</h5>
+
+                        <h2 id="skillCount">15</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="card dashboard-card shadow-sm">
+
+                    <div class="card-body text-center">
+
+                        <h5>Certificates</h5>
+
+                        <h2>1</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="card dashboard-card shadow-sm">
+
+                    <div class="card-body text-center">
+
+                        <h5>APIs Used</h5>
+
+                        <h2>1</h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Skills -->
+        <div class="card shadow mt-5">
+
+            <div class="card-body">
+
+                <h3 class="mb-4">
+                    Technical Skills
+                </h3>
+
+                <p>HTML</p>
+
+                <div class="progress mb-3">
+
+                    <div class="progress-bar" style="width:95%">
+                        95%
+
+                    </div>
+
+                </div>
+
+                <p>CSS</p>
+
+                <div class="progress mb-3">
+
+                    <div class="progress-bar" style="width:90%">
+
+                        90%
+
+                    </div>
+
+                </div>
+
+                <p>JavaScript</p>
+
+                <div class="progress mb-3">
+
+                    <div class="progress-bar "
+                        style="width:85%">
+
+                        85%
+
+                    </div>
+
+                </div>
+
+                <p>Node.js</p>
+
+                <div class="progress mb-3">
+
+                    <div class="progress-bar "
+                        style="width:80%">
+
+                        80%
+
+                    </div>
+
+                </div>
+
+                <p>MongoDB</p>
+
+                <div class="progress">
+
+                    <div class="progress-bar "
+                        style="width:75%">
+
+                        75%
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Featured Project -->
+
+        <div class="card shadow mt-5">
+
+            <div class="card-body">
+
+                <h3>
+                    Featured Project
+                </h3>
+
+                <h4 id="project-title">
+                    Wanderlust
+                </h4>
+
+                <p>
+
+                    A Full Stack Airbnb Clone built using
+                    Node.js, Express.js, MongoDB,
+                    Bootstrap and Cloudinary.
+
+                </p>
+
+                <a href="/projects"
+                    class="project-btn">
+
+                    View Projects
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Quote Section -->
+
+        <div class="card shadow mt-5">
+
+            <div class="card-body text-center">
+
+                <h3>
+
+                    💡 Developer Quote
+
+                </h3>
+
+                <p id="quoteText"
+                    class="fs-5 mt-4">
+
+                    Loading Quote...
+
+                </p>
+
+                <h5 id="quoteAuthor">
+
+                </h5>
+
+                <button
+                    class="btn btn-primary mt-3"
+                    id="newQuoteBtn">
+
+                    New Quote
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <div class="card shadow mt-5">
+
+            <div class="card-body">
+
+                <h3 class="mb-4">
+
+                    Quick Actions
+
+                </h3>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a
+                        href="/projects"
+                        class="btn btn-dark">
+
+                        View Projects
+
+                    </a>
+
+                    <a
+                        href="/skills"
+                        class="btn btn-success">
+
+                        Skills
+
+                    </a>
+
+                    <a
+                        href="/contact"
+                        class="btn btn-primary">
+
+                        Contact Me
+
+                    </a>
+
+                    <a
+                        href="https://github.com/vidhya-mewara"
+                        target="_blank"
+                        class="btn btn-secondary">
+
+                        GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="/js/quote.js"></script>
+<script src="/js/dashboard.js"></script>

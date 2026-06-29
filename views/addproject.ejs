@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate"); %>
+<section class="container py-5" id="contact">
+
+
+    <h2 class="section-title text-center mb-5">
+        Add New Project
+    </h2>
+    <div class="row justify-content-center">
+    
+    <div class="col-lg-7">
+
+    <form action="/addproject" id="projectForm" method="POST" class="needs-validation" novalidate >
+        <div class="mb-3">
+        
+            <label for="name" class="form-label">
+                Title
+            </label>
+        <input type="text" name="title" placeholder="Project Title" required>
+        <div class="invalid-feedback">
+            Name must be at least 3 characters.
+        </div>
+        
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        
+        </div>
+        <div class="mb-3">
+        
+            <label for="name" class="form-label">
+                Description
+            </label>
+        <textarea name="description" rows="5" placeholder="Project Description" required></textarea>
+        
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        
+        </div>
+
+        <div class="mb-3">
+            <label for="images" class="form-label">Upload Image</label>
+            <input type="url" name="images" class="form-control" required>
+            <div class="invalid-feedback">Please upload an image</div>
+        
+        </div>
+        <div class="mb-3">
+            <label for="technologies" class="form-label">Enter technologies used</label>
+        <input type="text" name="technologies" placeholder="HTML, CSS, JavaScript, Node.js" required>
+        <div class="invalid-feedback">Enter the technologies used</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="projectLink" class="form-label">Enter live project link</label>
+        <input type="url" name="projectLink" placeholder="Live Project URL">
+        <div class="invalid-feedback">Enter live project link</div>
+        
+        </div>
+
+        <div class="mb-3">
+            <label for="githubLink" class="form-label">Enter github repository link</label>
+        <input type="url" name="githubLink" placeholder="GitHub Repository URL">
+        <div class="invalid-feedback">Enter live project link</div>
+        </div>
+
+        <button type="submit">
+            Add Project
+        </button>
+
+    </form>
+    </div>
+    </div>
+    </section>

@@ -1,0 +1,114 @@
+<% layout("/layouts/boilerplate"); %>
+<% layout("/layouts/boilerplate") %>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+
+            <h2 class="section-title text-center">
+                Edit Project
+            </h2>
+
+            <form id="projectForm" action="/projects/<%= project._id %>?_method=PUT" method="POST">
+
+                <!-- Title -->
+                <div class="mb-3">
+                    <label class="form-label">Project Title</label>
+
+                    <input type="text" name="title" class="form-control" value="<%= project.title %>" required>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+
+                    <textarea name="description" class="form-control" rows="5"
+                        required><%= project.description %></textarea>
+                </div>
+
+                <!-- Technologies -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Technologies (comma separated)
+                    </label>
+
+                    <input type="text" name="technologies" class="form-control"
+                        value="<%= project.technologies.join(', ') %>">
+
+                </div>
+
+                <!-- Project Link -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Project Link
+                    </label>
+
+                    <input type="url" name="projectLink" class="form-control" value="<%= project.projectLink %>">
+
+                </div>
+
+                <!-- Current Images -->
+
+                <% if(project.images && project.images.length){ %>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Current Images
+                        </label>
+
+                        <div class="row">
+
+                            <% project.images.forEach(img=>{ %>
+
+                                <div class="col-md-4 mb-3">
+
+                                    <img src="<%= img %>" class="img-fluid rounded border"
+                                        style="height:180px;object-fit:cover;width:100%;">
+
+                                </div>
+
+                                <% }) %>
+
+                        </div>
+
+                    </div>
+
+                    <% } %>
+
+                        <!-- Upload New Images -->
+
+                        <div class="mb-4">
+
+                            <label class="form-label">
+                                Replace Images
+                            </label>
+
+                            <input type="text" name="images" class="form-control" value="<%= project.images.join(', ') %>">
+                            </div>
+
+                            <small class="text-muted">
+                                Leave empty if you don't want to change the images.
+                            </small>
+
+                        </div>
+                        <!-- Buttons -->
+
+                        <div class="text-center mt-4">
+
+                            <button type="submit" class="btn btn-primary">
+                                Update Project
+                            </button>
+
+                            <a href="/projects" class="btn btn-secondary">
+                                Cancel
+                            </a>
+
+                        </div>
+                    
+
+            </form>
+
+        </div>
+    </section>
